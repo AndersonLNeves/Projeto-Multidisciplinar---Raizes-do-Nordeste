@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/navbar.css">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="src/styles/new.css">
+    <link rel="stylesheet" href="src/styles/menu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="src/javascript/script.js"></script>
+    
+    <title>Raízes do Nordeste</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <!--Logo do restaurante-->
+            <img id="nav_logo" src="images/logo.png" alt="Logo Raízes do Nordeste">
+            <!-- Menu principal-->
+            <ul id="nav_list">
+                <li class="nav_item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#new">Novidades</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#info">Sobre</a>
+                </li>
+            </ul>
+            <!--Botões de -->
+        <div id="menu_button">
+            <button id="Login" class="button1">
+               <i class="fa-solid fa-user"></i>
+                Entrar
+            </button>
+
+            <button id="Bag" class="button2">
+               <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+
+            <button id="mobile_button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        </nav> 
+        
+        <div id="menu_mobile">
+            <button id="Login" class="button1">
+               <i class="fa-solid fa-user"></i>
+                Entrar
+            </button>
+            <ul id="mobile_nav_list">
+                <li class="nav_item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#new">Novidades</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#info">Sobre</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">
+                    O sabor do Nordeste sempre com você!
+                </h1>
+
+                <h3 id="home_description">
+                    Do Nordeste para o resto do Brasil. Agora o Raízes do Nordeste está presente em todos os estados do país, para você poder esperimentar o verdadeiro sabor do Nordeste a onde estiver.
+                </h3>
+
+                <div id="cta_buttons">  
+                    <a href="#menu" class="button1">
+                        Ver cardápio
+                    </a>
+                    <a href="#" id="phone_button">
+                        <button class="button1">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        Entre em contato
+                    </a>
+                </div>
+                <div class="media_buttons">
+                    <a href="https://web.whatsapp.com/">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="images/PratosDiversos.jpg" alt="Pratos diversos">
+            </div>
+            
+        </section>
+        
+        <section id="new">
+            <h2 class="section_title">Novidades</h2>
+            <h3 class="section_subtitle">Chegou o plano fidelidade do Raízes do Nordeste!</h3>
+            <div class="carrossel">
+                <div class="card_group">
+                    <div class="card">
+                        <img id="carrossel1" src="images/carrossel (1).png">
+                    </div>
+                    <div class="card">
+                        <img id="carrossel2" src="images/carrossel (2).png">
+                    </div>
+                    <div class="card">
+                        <img id="carrossel3" src="images/carrossel (3).png">
+                    </div>
+                    <div class="card">
+                        <img id="carrossel4" src="images/carrossel (4).png">
+                    </div>
+                </div>
+                <div aria-hidden class="card_group">
+                    <div class="card">
+                        <img id="carrossel1" src="images/carrossel (1).png">
+                    </div>
+                    <div class="card">
+                        <img id="carrossel2" src="images/carrossel (2).png">
+                    </div>
+                    <div class="card">
+                        <img id="carrossel3" src="images/carrossel (3).png">
+                    </div>
+                    <div class="card">
+                        <img id="carrossel4" src="images/carrossel (4).png">
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+            <p> Com o plano fidelidade você garante envio grátis e 10% de desconto em todas os pedidos, além de sorteios, brindes e promoções exclusivas por apenas R$29,00 mensal. Para gerenciar o plano fidelidade, acesse o seu perfil no menu inicial.</p>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section_title">Cardápio</h2>
+            <div id="food_menu_button">
+                    <a href="#starters">Entradas
+                        <i class="fa-solid fa-burger"></i>
+                    </a>
+                
+                    <a href="#main_dishes">Pratos principais
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </a>
+                
+                
+                    <a href="#portions">Porções
+                        <i class="fa-solid fa-bowl-rice"></i>
+                    </a>
+                
+                
+                    <a href="#dessert">Sobremesas
+                        <i class="fa-solid fa-cheese"></i>
+                    </a>
+                
+                
+                    <a href="#drinks">Bebidas
+                        <i class="fa-solid fa-glass-water"></i>
+                    </a>
+            </div>
+
+            <div id="food_menu_mobile">
+                <a href="#starters"><i class="fa-solid fa-burger"></i>
+                    </a>
+                
+                    <a href="#main_dishes"><i class="fa-solid fa-bowl-food"></i>
+                    </a>
+                
+                
+                    <a href="#portions"><i class="fa-solid fa-bowl-rice"></i>
+                    </a>
+                
+                
+                    <a href="#dessert"><i class="fa-solid fa-cheese"></i>
+                    </a>
+                
+                
+                    <a href="#drinks"><i class="fa-solid fa-glass-water"></i>
+                    </a>
+            </div>
+                <section id="starters">
+                    <h2 class="section_subtitle">Entradas:</h2>
+                </section>
+
+            <div id="dishes">
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Acarajé tradicional
+                    </h3>
+
+                    <img src="images/entrada1.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 24,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+                    
+                    <span class="dish_description">
+                        Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá e camarão.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Caldinho de Feijão
+                    </h3>
+
+                    <img src="images/entrada2.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 14,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Caldo de feijão, com cheiro-verde e torresmo.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Cuscuz
+                    </h3>
+
+                    <img src="images/entrada3.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 14,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        O clássico cuscuz de milho nordestino.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Queijo coalho na brasa
+                    </h3>
+
+                    <img src="images/entrada4.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 18,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Queijo coalho acompanhado de melaço de cana e mel.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Bolinho de Carne de Sol
+                    </h3>
+
+                    <img src="images/entrada5.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 22,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Bolinho frito feito com carne de sol e um toque de mateiga de garrafa. 
+                    </span>
+                    
+                </div>
+            </div>
+
+                <section id="main_dishes">
+                    <h2 class="section_subtitle">Pratos principais:</h2>
+                </section>
+
+            <div id="dishes">
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Baião de Dois
+                    </h3>
+
+                    <img src="images/principais1.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 39,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+                    
+                    <span class="dish_description">
+                        Arroz, feijão-verde, queijo coalho e carne de sol.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Carne de Sol com Macaxeira
+                    </h3>
+
+                    <img src="images/principais2.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 49,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Servida com manteiga de garrafa e vinagrete.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Moqueca Baiana
+                    </h3>
+
+                    <img src="images/principais3.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 54,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                       Peixe com leite de coco, dendê e pimentões.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Galinha Caipira
+                    </h3>
+
+                    <img src="images/principais4.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 42,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Cozida lentamente com temperos regionais.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Escondidinho de Carne de Sol
+                    </h3>
+
+                    <img src="images/principais5.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 41,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Purê de macaxeira com recheio cremoso. 
+                    </span>
+                    
+                </div>
+            </div>
+
+            <section id="portions">
+                    <h2 class="section_subtitle">Porções:</h2>
+                </section>
+
+            <div id="dishes">
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Carne de Sol Acebolada
+                    </h3>
+
+                    <img src="images/porcoes1.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 49,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+                    
+                    <span class="dish_description">
+                        Porção de carne de sol acebolada em cubos.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Torresmo Crocante
+                    </h3>
+
+                    <img src="images/porcoes2.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 29,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Porção de torresmo frito, sequinho e crocante.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Linguiça Acebolada
+                    </h3>
+
+                    <img src="images/porcoes3.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 34,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                       Porção de linguiça artesanal acebolada em rodelas.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Macaxeira Frita
+                    </h3>
+
+                    <img src="images/porcoes4.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 24,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Porção de macaxeira frita, sequinha e crocante.
+                    </span>
+                </div>
+
+                <div class="dish">
+                    <h3 class="dish_title">
+                        Mix Nordestino
+                    </h3>
+
+                    <img src="images/porcoes5.png" class="dish_image">
+
+                    <div class="dish_price">
+                        <h3>R$ 69,90</h3>
+                        <button class="button2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </div>
+
+                    <span class="dish_description">
+                        Combinação especial das porções da casa.
+                    </span>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+</body>
+</html>
