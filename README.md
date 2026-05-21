@@ -26,7 +26,7 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 
 1. [Tecnologias](#tecnologias)
 2. [Executando o Sistema](#executando-o-sistema)
-3. [Acessando o Swagger](#swagger)
+3. [Acessando o Swagger](#Acessando-o-swagger)
 4. [Fluxo Principal](#fluxo-principal)
 5. [Endpoints](#endpoints)
 6. [LGPD e Segurança](#lgpd-e-segurança)
