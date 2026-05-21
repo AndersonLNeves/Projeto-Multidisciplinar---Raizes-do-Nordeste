@@ -25,13 +25,13 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 # SUMÁRIO #
 
 1. [Tecnologias](#tecnologias)
-2. [Executando o Sistema](#executando_o_sistema)
-3. [Acessando Swagger](#swagger)
+2. [Executando o Sistema](#executando-o-sistema)
+3. [Acessando o Swagger](#swagger)
 4. [Fluxo Principal](#fluxo-principal)
 5. [Endpoints](#endpoints)
 6. [LGPD e Segurança](#lgpd-e-segurança)
 7. [Conclusão](#conclusão)
-8. [Passo a Passo da Instalação do Maven](#passo-a-passo)
+8. [Passo a Passo da Instalação do Maven](#passo-a-passo-da-instalação-do-Maven)
 
 #############################################################################################
 
