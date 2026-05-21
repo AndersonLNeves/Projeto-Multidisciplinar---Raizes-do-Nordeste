@@ -1,9 +1,12 @@
-# Apresentação Pessoal #
+# APRESENTAÇÃO PESSOAL #
 
 Ola! Seja muito bem vindo, meu nome é Anderson Littig, sou aluno de Análise e desenvolvimento de sistemas do Centro Universitário Internacional UNINTER. Este projeto foi desenvolvido como uma atividade multidisciplinar promovida pelo centro de ensino, a ideia é desenvolver e simular o funcionamento de um sistema de uma rede de lanchonetes nordestinas, é um dos meus maiores projetos até o momento, mas sempre busco aprender mais.
 Nas linhas seguintes detalhei de forma mais didática, ficou bem longo, mas a ideia é que até mesmo um leigo possa ler, entender e com paciência e vontade de fazer, colocar em funcionamento esse sistema. Após as apresentações, desejo uma boa leitura.
 
-###############################################################
+**A interface visual do restaurante (frontend) não está incluída no projeto.**
+**A interação com a API é feita através do Swagger/OpenAPI.**
+
+#####################################################################
 
 # Rede Raízes do Nordeste — API Backend #
 
@@ -17,22 +20,20 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 - Multiplos canais de atendimento;
 - Atualização de status de pedido.
 
-###############################################################
+###############################################################################################################
 
-# Sumário #
+# SUMÁRIO #
 
 1. [Tecnologias](#tecnologias)
 2. [Executando o Sistema](#executando_o_sistema)
-3. 
-4. [Usuários de teste (seed)](#usuários-de-teste)
-5. [Swagger / Documentação](#swagger)
-6. [Fluxo Principal](#fluxo-principal)
-7. [Endpoints](#endpoints)
-8. [Plano de Testes](#plano-de-testes)
-9. [LGPD e Segurança](#lgpd-e-segurança)
-10. [Conclusão](#conclusão)
+3. [Acessando Swagger](#swagger)
+4. [Fluxo Principal](#fluxo-principal)
+5. [Endpoints](#endpoints)
+6. [LGPD e Segurança](#lgpd-e-segurança)
+7. [Conclusão](#conclusão)
+8. [Passo a Passo da Instalação do Maven](#passo-a-passo)
 
-###############################################################
+#################################################################################################################
 
 # TECNOLOGIAS #
 
@@ -52,7 +53,7 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 
 | Swagger e OpenAPI | --- Serviram de documentação automática de API, permitindo testes diretos dos endpoints e visualização das rotas disponíveis.
 
-#################################################################
+####################################################################################################################
 
 # EXECUTANDO O SISTEMA #
 
@@ -61,47 +62,38 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 - Java 21 instalado ([download](https://www.oracle.com/br/java/technologies/downloads/))
 - Maven 3.9.9 instalado ([download](https://maven.apache.org/download.cgi))
 
-> **Não precisa instalar banco de dados externo como MySQL ou PostgreSQL.** O H2 é o banco de dados, ele é criado automaticamente na memória.
+> O banco de dados H2 já está embutido na aplicação, portanto **não é necessário instalar MySQL ou PostgreSQL.**
 
-**Obs**: As funcionalidades seguintes foram feitas no sistema operacional Windows, então, onde estiver escrito PowerShell (prompt de comando do windows), leia-se bash, caso utilize outro sistema operacional.
+> Obs: **As funcionalidades seguintes foram feitas no sistema operacional Windows, então, onde estiver escrito PowerShell (prompt de comando do windows), leia-se bash, caso utilize outro sistema operacional.**
 
-### 1. Clonar o repositório
+**Caso tenha dúvidas na instalação do Maven, deixei uma breve explicação no final desta pagina.**
+
+### Clonar o repositório ###
 
 ```PowerShell
 git clone https://github.com/AndersonLNeves/Projeto-Multidisciplinar---Raizes-do-Nordeste
 cd raizes-do-nordeste
 ```
+> Obs: Se no terminal de comando estiver escrito:
+> PS C:\Windows\System32>
 
-### 2. Variáveis de ambiente (opcional)
+indica que você esta dentro da pasta protegida do windows e pode dar erro na execução. Neste caso você vai digitar o seguinte comando para entrar na pasta de usuário:
+> C:\Users\User
 
-O projeto já possui valores padrão configurados em `application.properties`. Para personalizar, crie um `.env` ou sobrescreva as propriedades:
+### Executando a API e Compilando Programa ###
 
-```properties
-# JWT secret (mínimo 32 chars)
-jwt.secret=raizesnordeste-secret-key-super-segura-2024-backend-atividade
-
-# Expiração do token em ms (padrão: 24h)
-jwt.expiration=86400000
-
-# Porta do servidor (padrão: 8080)
-server.port=8080
-```
-
-### 3. Instalar dependências e compilar
-
-```bash
+```PowerShell
 mvn clean install -DskipTests
 ```
+Resultado esperado após o comando:
+> BUILD SUCCESS
 
-### 4. Iniciar a API
-
-```bash
+```PowerShell
 mvn spring-boot:run
 ```
-
 Saída esperada no terminal:
+> === Seed concluído! ===
 ```
-=== Seed concluído! ===
 Usuários criados:
   ADMIN:     admin@raizes.com / admin123
   GERENTE:   gerente@raizes.com / gerente123
@@ -111,23 +103,30 @@ Usuários criados:
 Swagger: http://localhost:8080/swagger-ui.html
 ```
 
-### 5. Acessar a documentação
+#############################################################################################################
+
+### ACESSANDO O SWAGGER ###
+
+Abra no Navegador:
 
 - **Swagger UI:** http://localhost:8080/swagger-ui.html
+> O Swagger é a interface visual da API.
+
 - **OpenAPI JSON:** http://localhost:8080/api-docs
+> Documentação
+
 - **H2 Console:** http://localhost:8080/h2-console
-  - JDBC URL: `jdbc:h2:mem:raizesnordeste`
-  - User: `sa` | Password: (em branco)
+> Banco de dados
+  
+No console H2, nos campos da esquerda, digite o código que aparece na direita:
+- JDBC URL: `jdbc:h2:mem:raizesnordeste`
+- User Name: `sa`
+- Password: (em branco)
+> Agora tera acesso ao banco de dados para gerenciamento geral
 
-### 6. Rodar os testes
+### Fazendo login na API ###
 
-```bash
-mvn test
-```
-
----
-
-## Usuários de teste
+#### Usuários de teste ####
 
 Criados automaticamente pelo `DataSeeder` ao iniciar a aplicação:
 
@@ -139,39 +138,61 @@ Criados automaticamente pelo `DataSeeder` ao iniciar a aplicação:
 | ATENDENTE | atendente@raizes.com | atendente123 | 0 |
 | CLIENTE | cliente@raizes.com | cliente123 | 500 |
 
----
+#### 2. No Swagger: ####
 
-## Swagger
+Para testar endpoints de login:
+1. Procure `POST /auth/login`
+2. Clique em 'Try it out'
+3. Envie no terminal que aparecer abaixo o código a seguir e Execute:
 
-URL local: **http://localhost:8080/swagger-ui.html**
+{
+  "email": "cliente@raizes.com",
+  "senha": "cliente123"
+}
 
-Para testar endpoints autenticados no Swagger:
-1. Execute `POST /auth/login` com as credenciais
-2. Copie o campo `token` da resposta
+> Resposta esperada no terminal:
+
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9...",
+  "tipo": "Bearer",
+  "email": "cliente@raizes.com",
+  "role": "CLIENTE"
+}
+
+4. Copie o campo `token` da resposta
 3. Clique em **Authorize** (cadeado no topo)
 4. Cole: `Bearer {seu_token}`
+> Agora os Endpoints protegidos funcionarão normalmente.
 
----
+##################################################################################################
 
-## Fluxo Principal
+## FLUXO PRINCIPAL ##
 
-### Fluxo A — Pedido → Pagamento → Status (MVP obrigatório)
+### Fluxo A — Pedido → Pagamento → Status ###
 
 ```
-POST /auth/login                          → obtém JWT token
-GET  /unidades                            → lista unidades
-GET  /produtos/unidade/1/cardapio         → ver cardápio disponível
-POST /pedidos                             → criar pedido (informar canalPedido!)
-POST /pagamentos                          → processar pagamento mock
-PATCH /pedidos/{id}/status?novoStatus=EM_PREPARO   → cozinha inicia
-PATCH /pedidos/{id}/status?novoStatus=PRONTO        → cozinha finaliza
-PATCH /pedidos/{id}/status?novoStatus=ENTREGUE      → atendente entrega
-GET  /fidelidade/saldo                    → ver pontos acumulados
+POST /auth/login
+     → obtém JWT token
+GET  /unidades
+     → lista unidades
+GET  /produtos/unidade/1/cardapio
+     → ver cardápio disponível
+POST /pedidos
+     → criar pedido (informar canalPedido!)
+POST /pagamentos
+     → processar pagamento mock
+PATCH /pedidos/{id}/status?novoStatus=EM_PREPARO
+     → cozinha inicia
+PATCH /pedidos/{id}/status?novoStatus=PRONTO
+     → cozinha finaliza
+PATCH /pedidos/{id}/status?novoStatus=ENTREGUE
+     → atendente entrega
+GET  /fidelidade/saldo
+     → ver pontos acumulados
 ```
+#####################################################################################################
 
----
-
-## Endpoints
+## ENDPOINTS ##
 
 ### /auth
 
@@ -263,7 +284,7 @@ Listagem paginada com filtro por categoria.
 ### /pedidos
 
 #### POST /pedidos
-Requer: JWT (qualquer role).
+Requer: JWT
 **`canalPedido` é obrigatório.**
 
 **Request:**
@@ -379,54 +400,22 @@ Todos os erros seguem o mesmo formato:
 }
 ```
 
----
+##############################################################################################################
 
-## Plano de Testes
+## LGPD E SEGURANÇA ##
 
-> Coleção completa em: `postman/raizes-do-nordeste.postman_collection.json`
->
-> **Ordem de execução:** T01 (login admin) → T02 (login cliente) → T05 (cadastro) → T07-T08 (unidades/cardápio) → T09-T10 (estoque) → T11 (criar pedido) → T18 (pagamento) → T21-T23 (status) → T24 (fidelidade)
+### Dados pessoais coletados ###
 
-### Cenários Positivos
+Dado
+    Nome, Email, CPF, Telefone e Histórico de Pedidos
+Finalidade
+    Identificação, autenticação, Programa de fidelidade, Comunicação e Auditoria
+Base Legal
+    Execução de contrato, Consentimento e Obrigação Legal
+Retenção
+    Enquanto conta ativa, 5 anos pelo código civil
 
-| ID | Endpoint | Pré-condição | Entrada | Status esperado |
-|----|----------|--------------|---------|-----------------|
-| T01 | POST /auth/login | seed aplicado | admin@raizes.com / admin123 | 200 + token |
-| T02 | POST /auth/login | seed aplicado | cliente@raizes.com / cliente123 | 200 + role=CLIENTE |
-| T05 | POST /auth/cadastro | email inédito | consentimentoLgpd=true | 201 |
-| T07 | GET /unidades | seed aplicado | - | 200 + lista |
-| T08 | GET /produtos/unidade/1/cardapio | seed aplicado | - | 200 + disponivel=true |
-| T11 | POST /pedidos | logado, estoque OK | canalPedido=APP | 201 + status=PENDENTE |
-| T18 | POST /pagamentos | pedido pendente | metodo=PIX | 200 + status=APROVADO |
-| T23 | PATCH /pedidos/{id}/status | pagamento aprovado | novoStatus=ENTREGUE | 200 + pontosGerados>0 |
-
-### Cenários Negativos
-
-| ID | Endpoint | Entrada | Status esperado | Mensagem |
-|----|----------|---------|-----------------|---------|
-| T03 | POST /auth/login | senha errada | 401 | Email ou senha inválidos |
-| T04 | GET /pedidos | sem token | 401 | - |
-| T06 | POST /auth/cadastro | consentimentoLgpd=false | 422 | campos.consentimentoLgpd |
-| T14 | POST /pedidos | sem canalPedido | 422 | campos.canalPedido |
-| T15 | POST /pedidos | produtoId=9999 | 404 | Produto não encontrado |
-| T16 | POST /pedidos | quantidade=99999 | 409 | Estoque insuficiente |
-| T17 | POST /unidades | token de CLIENTE | 403 | Acesso negado |
-| T19 | POST /pagamentos | pedido já pago | 409 | Pagamento já aprovado |
-
----
-
-## LGPD e Segurança
-
-### Dados pessoais coletados
-
-| Dado | Finalidade | Base legal | Retenção |
-|------|-----------|------------|---------|
-| Nome, Email | Identificação, autenticação | Execução de contrato | Enquanto conta ativa |
-| CPF | Programa de fidelidade | Consentimento | Enquanto conta ativa |
-| Telefone | Comunicação | Consentimento (marketing) | Enquanto conta ativa |
-| Histórico de pedidos | Programa de fidelidade, auditoria | Obrigação legal | 5 anos (Código Civil) |
-
-### Controles implementados
+### Controles implementados ###
 
 - **Senhas:** BCrypt hash (fator 10) — nunca armazenadas em texto plano
 - **Autenticação:** JWT Bearer token com expiração de 24h
@@ -437,47 +426,51 @@ Todos os erros seguem o mesmo formato:
 - **LGPD no response:** CPF não é retornado nas respostas padrão da API
 - **Dados de menores:** não coletados (sem campo de data de nascimento sem validação de idade)
 
-### Promoções/Campanhas (conceitual)
+#################################################################################################################
 
-Para implementar promoções, o modelo sugere:
+## CONCLUSÃO ##
+
+Durante a implementação do sistema foram concluídas as principais funcionalidades previstas para o gerenciamento operacional do restaurante, contemplando autenticação, controle de pedidos, estoque, pagamentos e fidelização de clientes.
+
+### As funcionalidades implementadas incluem: ###
+
+- **Fluxo completo de atendimento** abrangendo criação do pedido, processamento do pagamento e atualização do status até sua conclusão;
+- **Sistema de autenticação baseado em JWT (JSON Web Token)** com controle de permissões para cinco perfis distintos de usuários;
+- **Suporte a múltiplos canais de atendimento** exigindo a identificação da origem do pedido e permitindo consultas filtradas por canal;
+- **Gerenciamento de estoque por unidade** incluindo movimentações de entrada e saída e validação automática durante a realização de pedidos;
+- **Programa de fidelidade** com acúmulo e utilização de pontos, respeitando as regras de consentimento estabelecidas;
+- **Simulação de gateway de pagamento** com regras de aprovação e reprovação de transações e retorno detalhado das operações;
+- **Registro de auditoria** para operações consideradas sensíveis, contribuindo para rastreabilidade e conformidade com a LGPD;
+- **Documentação automática** da API por meio do Swagger/OpenAPI;
+- **Tratamento padronizado** de erros e exceções em todos os endpoints;
+- **Carga inicial de dados para testes e validação** contendo usuários, unidades, produtos e estoque previamente configurados.
+
+###################################################################################################################
+
+## PASSO A PASSO PARA INSTALAÇÃO DO MAVEN NO WINDOWS ##
+
+1. Baixe o Apache Maven no link https://maven.apache.org/
+2. Escolha Binary zip archive
+3. Extraia para C:\Program Files\Apache\Maven
+    Exemplo C:\Program Files\Apache\Maven\apache-maven-3.9.9
+
+> Agora vamos configurar o PATH
+
+1. Pesquise no Windows: 'Variáveis de Ambiente'
+2. Abra: 'Editar variáveis do de ambiente do sistema'
+3. Depois: 'Variáveis do ambiente'
+4. Na seção variáveis do sistema
+5. Edite: PATH
+6. Adicione: C:\Program Files\Apache\Maven\apache-maven-3.9.9\bin
+
+> Verificação do Maven
+
+``` PowerShell
+mvn -version
 ```
-Entidade Campanha { id, nome, desconto, dataInicio, dataFim, canalAplicavel, produtosAlvo }
-```
-Aplicada no PedidoService antes do cálculo do valorTotal, verificando `canalPedido` e `dataAtual`.
 
----
+Resultado Esperado:
 
-## Conclusão
+- Apache Maven 3.9.9
 
-### O que foi implementado
-
-- **Fluxo A completo:** Pedido → Pagamento Mock → Atualização de Status ✅
-- **Autenticação JWT** com 5 perfis e controle de acesso ✅
-- **Multicanalidade:** campo `canalPedido` obrigatório em pedidos, filtro por canal ✅
-- **Estoque por unidade** com controle de entrada/saída e validação em pedidos ✅
-- **Programa de fidelidade** com acúmulo de pontos e resgate com consentimento ✅
-- **Gateway mock** com lógica de aprovação/recusa e payload de retorno ✅
-- **AuditLog** para ações sensíveis (LGPD) ✅
-- **Swagger/OpenAPI** gerado automaticamente ✅
-- **Padrão de erro** consistente em toda a API ✅
-- **Seed** com 5 usuários, 2 unidades, 9 produtos e estoque configurado ✅
-
-### O que ficou como proposta
-
-- **Deploy em nuvem:** Dockerfile e deploy em Railway/Render (migração para PostgreSQL é automática via `spring.jpa.hibernate.ddl-auto`)
-- **Campanhas/Promoções:** modelagem conceitual documentada acima
-- **Testes de integração** completos com MockMvc
-- **Rate limiting** por IP para endpoints públicos
-- **Anonimização** automática de dados após inatividade (cron job)
-
-### Como o DER, Classes e Casos de Uso se conectam
-
-O DER reflete exatamente as entidades JPA: `pedidos` possui FK para `usuarios`, `unidades` e referência 1:1 para `pagamentos`. Os casos de uso (criar pedido, processar pagamento) são os Application Services, que orquestram as regras do Domain (verificação de estoque, transição de status) e delegam persistência para os Repositories da camada Infrastructure.
-
----
-
-## Links
-
-- **Swagger local:** http://localhost:8080/swagger-ui.html
-- **H2 Console:** http://localhost:8080/h2-console
-- **Coleção Postman:** `postman/raizes-do-nordeste.postman_collection.json`
+...
