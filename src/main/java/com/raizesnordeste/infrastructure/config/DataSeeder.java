@@ -29,17 +29,17 @@ public class DataSeeder implements CommandLineRunner {
 
         // ---- UNIDADES ----
         Unidade unidade1 = unidadeRepository.save(Unidade.builder()
-                .nome("Raízes do Nordeste - Centro")
-                .endereco("Rua do Forró, 123")
-                .cidade("Fortaleza").estado("CE")
-                .cnpj("12345678000101").telefone("(85) 99999-0001")
+                .nome("Raízes do Nordeste - Aracaju")
+                .endereco("Rua Vila Cristina, 288")
+                .cidade("Aracaju").estado("SE")
+                .cnpj("1122334000101").telefone("(79) 99999-9991")
                 .ativa(true).build());
 
         Unidade unidade2 = unidadeRepository.save(Unidade.builder()
-                .nome("Raízes do Nordeste - Shopping")
-                .endereco("Av. Washington Soares, 800 - Loja 42")
-                .cidade("Fortaleza").estado("CE")
-                .cnpj("12345678000202").telefone("(85) 99999-0002")
+                .nome("Raízes do Nordeste - Barra dos coqueiros")
+                .endereco("Rua Wilson Simonal, 70")
+                .cidade("Aracaju").estado("SE")
+                .cnpj("1224455000102").telefone("(79) 99999-9992")
                 .ativa(true).build());
 
         // ---- USUÁRIOS ----
@@ -51,30 +51,30 @@ public class DataSeeder implements CommandLineRunner {
                 .pontosFidelidade(0).build());
 
         Usuario gerente = usuarioRepository.save(Usuario.builder()
-                .nome("Maria Gerente").email("gerente@raizes.com")
+                .nome("Anderson Gerente").email("gerente@raizes.com")
                 .senha(passwordEncoder.encode("gerente123"))
                 .role(Role.GERENTE).ativo(true)
                 .consentimentoLgpd(true).dataConsentimentoLgpd(LocalDateTime.now())
                 .pontosFidelidade(0).build());
 
         usuarioRepository.save(Usuario.builder()
-                .nome("João Cozinha").email("cozinha@raizes.com")
+                .nome("Letícia Cozinha").email("cozinha@raizes.com")
                 .senha(passwordEncoder.encode("cozinha123"))
                 .role(Role.COZINHA).ativo(true)
                 .consentimentoLgpd(true).dataConsentimentoLgpd(LocalDateTime.now())
                 .pontosFidelidade(0).build());
 
         usuarioRepository.save(Usuario.builder()
-                .nome("Ana Atendente").email("atendente@raizes.com")
+                .nome("Abgail Atendente").email("atendente@raizes.com")
                 .senha(passwordEncoder.encode("atendente123"))
                 .role(Role.ATENDENTE).ativo(true)
                 .consentimentoLgpd(true).dataConsentimentoLgpd(LocalDateTime.now())
                 .pontosFidelidade(0).build());
 
         Usuario cliente = usuarioRepository.save(Usuario.builder()
-                .nome("Pedro Cliente").email("cliente@raizes.com")
+                .nome("Dudu Cliente").email("cliente@raizes.com")
                 .senha(passwordEncoder.encode("cliente123"))
-                .cpf("12345678901").telefone("(85) 98888-1234")
+                .cpf("12345678901").telefone("(79) 98765-4321")
                 .role(Role.CLIENTE).ativo(true)
                 .consentimentoLgpd(true).dataConsentimentoLgpd(LocalDateTime.now())
                 .consentimentoMarketing(true)
@@ -82,54 +82,54 @@ public class DataSeeder implements CommandLineRunner {
 
         // ---- PRODUTOS (Unidade 1) ----
         Produto tapioca = produtoRepository.save(Produto.builder()
-                .nome("Tapioca de Queijo Coalho").descricao("Tapioca artesanal com queijo coalho grelhado")
-                .preco(new BigDecimal("18.90")).categoria("LANCHE")
+                .nome("Tapioca de Frango com catupiri").descricao("Tapioca artesanal com frango da casa e catupiri")
+                .preco(new BigDecimal("12.90")).categoria("LANCHE")
                 .unidade(unidade1).disponivel(true).build());
 
         Produto baiao = produtoRepository.save(Produto.builder()
-                .nome("Baião de Dois").descricao("Feijão verde com arroz, queijo, bacon e manteiga de garrafa")
-                .preco(new BigDecimal("32.50")).categoria("PRATO_PRINCIPAL")
+                .nome("Aratu na Palha").descricao("Carne de aratu (um crustáceo de mangue) temperada e servida assada dentro da palha do coco.")
+                .preco(new BigDecimal("25.00")).categoria("PRATO_PRINCIPAL")
                 .unidade(unidade1).disponivel(true).build());
 
         Produto caldo = produtoRepository.save(Produto.builder()
-                .nome("Caldo de Mocotó").descricao("Caldo tradicional nordestino com temperos da casa")
-                .preco(new BigDecimal("24.00")).categoria("PRATO_PRINCIPAL")
+                .nome("Caldo de Sururu").descricao("Preparado com o pequeno molusco local, cozido com bastantes temperos, leite de coco e azeite de dendê.")
+                .preco(new BigDecimal("20.00")).categoria("PRATO_PRINCIPAL")
                 .unidade(unidade1).disponivel(true).build());
 
         Produto sucoManga = produtoRepository.save(Produto.builder()
-                .nome("Suco de Manga").descricao("Suco natural de manga 500ml")
-                .preco(new BigDecimal("9.90")).categoria("BEBIDA")
+                .nome("Suco de Mangaba").descricao("Suco natural de mangaba 700ml")
+                .preco(new BigDecimal("11.90")).categoria("BEBIDA")
                 .unidade(unidade1).disponivel(true).build());
 
         Produto cajuina = produtoRepository.save(Produto.builder()
-                .nome("Cajuína").descricao("Cajuína artesanal do Piauí 300ml")
-                .preco(new BigDecimal("7.50")).categoria("BEBIDA")
+                .nome("Caju").descricao("Suco natural de Caju 500ml")
+                .preco(new BigDecimal("9.50")).categoria("BEBIDA")
                 .unidade(unidade1).disponivel(true).build());
 
         Produto cocada = produtoRepository.save(Produto.builder()
-                .nome("Cocada Branca").descricao("Cocada artesanal com leite de coco")
-                .preco(new BigDecimal("6.00")).categoria("SOBREMESA")
+                .nome("Cocada queimada").descricao("Cocada artesanal com leite de coco queimado")
+                .preco(new BigDecimal("8.00")).categoria("SOBREMESA")
                 .unidade(unidade1).disponivel(true).build());
 
         // Produto indisponível (para teste)
         Produto carneAssada = produtoRepository.save(Produto.builder()
-                .nome("Carne Assada com Baião").descricao("Produto temporariamente indisponível")
-                .preco(new BigDecimal("45.00")).categoria("PRATO_PRINCIPAL")
+                .nome("Carne Assada no Bafo").descricao("Produto indisponível no Momento")
+                .preco(new BigDecimal("42.90")).categoria("PRATO_PRINCIPAL")
                 .unidade(unidade1).disponivel(false).build());
 
         // ---- PRODUTOS (Unidade 2) ----
         Produto combo1 = produtoRepository.save(Produto.builder()
-                .nome("Combo Nordestino").descricao("Tapioca + Suco + Cocada")
-                .preco(new BigDecimal("29.90")).categoria("COMBO")
+                .nome("Mata Fome Nordestino").descricao("Carne de Sol + Suco ou Refri + Cocada Queimada")
+                .preco(new BigDecimal("49.90")).categoria("COMBO")
                 .unidade(unidade2).disponivel(true).build());
 
         Produto bucho = produtoRepository.save(Produto.builder()
-                .nome("Buchada de Bode").descricao("Prato tradicional com temperos nordestinos")
-                .preco(new BigDecimal("38.00")).categoria("PRATO_PRINCIPAL")
+                .nome("Buchada + Feijoada").descricao("A feijoada sergipana é uma variação do tradicional prato brasileiro diferente dos demais estados. e com uma buchada da casa")
+                .preco(new BigDecimal("48.00")).categoria("PRATO_PRINCIPAL")
                 .unidade(unidade2).disponivel(true).build());
 
         // ---- ESTOQUE (Unidade 1) ----
-        criarEstoque(tapioca, unidade1, 50, 10);
+        criarEstoque(tapioca, unidade1, 80, 10);
         criarEstoque(baiao, unidade1, 30, 5);
         criarEstoque(caldo, unidade1, 20, 5);
         criarEstoque(sucoManga, unidade1, 100, 20);

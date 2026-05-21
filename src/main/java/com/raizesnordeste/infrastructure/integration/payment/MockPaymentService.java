@@ -13,7 +13,7 @@ import java.util.UUID;
  * Serviço mock de gateway de pagamento externo.
  * Simula chamada para API de pagamento externa (ex: Cielo, Pagarme, Stripe).
  *
- * Em produção, este serviço faria uma chamada HTTP real para o gateway.
+ * Durante a produção do pedido, este serviço faria uma chamada HTTP real para o gateway.
  * Para fins de demonstração, aprova 80% das transações e recusa 20%.
  */
 @Service
