@@ -3,8 +3,8 @@
 Ola! Seja muito bem vindo, meu nome é Anderson Littig, sou aluno de Análise e desenvolvimento de sistemas do Centro Universitário Internacional UNINTER. Este projeto foi desenvolvido como uma atividade multidisciplinar promovida pelo centro de ensino, a ideia é desenvolver e simular o funcionamento de um sistema de uma rede de lanchonetes nordestinas, é um dos meus maiores projetos até o momento, mas sempre busco aprender mais.
 Nas linhas seguintes detalhei de forma mais didática, ficou bem longo, mas a ideia é que até mesmo um leigo possa ler, entender e com paciência e vontade de fazer, colocar em funcionamento esse sistema. Após as apresentações, desejo uma boa leitura.
 
-**A interface visual do restaurante (frontend) não está incluída no projeto.**
-**A interação com a API é feita através do Swagger/OpenAPI.**
+> A interface visual do restaurante (frontend) não está incluída no projeto.
+> A interação com a API é feita através do Swagger/OpenAPI.
 
 #############################################################################################
 
