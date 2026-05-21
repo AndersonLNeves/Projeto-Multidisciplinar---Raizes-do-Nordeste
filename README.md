@@ -6,7 +6,7 @@ Nas linhas seguintes detalhei de forma mais didática, ficou bem longo, mas a id
 **A interface visual do restaurante (frontend) não está incluída no projeto.**
 **A interação com a API é feita através do Swagger/OpenAPI.**
 
-#####################################################################
+#############################################################################################
 
 # Rede Raízes do Nordeste — API Backend #
 
@@ -20,7 +20,7 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 - Multiplos canais de atendimento;
 - Atualização de status de pedido.
 
-###############################################################################################################
+#############################################################################################
 
 # SUMÁRIO #
 
@@ -33,7 +33,7 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 7. [Conclusão](#conclusão)
 8. [Passo a Passo da Instalação do Maven](#passo-a-passo)
 
-#################################################################################################################
+#############################################################################################
 
 # TECNOLOGIAS #
 
@@ -53,7 +53,7 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 
 | Swagger e OpenAPI | --- Serviram de documentação automática de API, permitindo testes diretos dos endpoints e visualização das rotas disponíveis.
 
-####################################################################################################################
+#############################################################################################
 
 # EXECUTANDO O SISTEMA #
 
@@ -103,7 +103,7 @@ Usuários criados:
 Swagger: http://localhost:8080/swagger-ui.html
 ```
 
-#############################################################################################################
+#############################################################################################
 
 ### ACESSANDO O SWAGGER ###
 
@@ -164,7 +164,7 @@ Para testar endpoints de login:
 4. Cole: `Bearer {seu_token}`
 > Agora os Endpoints protegidos funcionarão normalmente.
 
-##################################################################################################
+#############################################################################################
 
 ## FLUXO PRINCIPAL ##
 
@@ -190,7 +190,7 @@ PATCH /pedidos/{id}/status?novoStatus=ENTREGUE
 GET  /fidelidade/saldo
      → ver pontos acumulados
 ```
-#####################################################################################################
+#############################################################################################
 
 ## ENDPOINTS ##
 
@@ -400,7 +400,7 @@ Todos os erros seguem o mesmo formato:
 }
 ```
 
-##############################################################################################################
+#############################################################################################
 
 ## LGPD E SEGURANÇA ##
 
@@ -426,7 +426,7 @@ Retenção
 - **LGPD no response:** CPF não é retornado nas respostas padrão da API
 - **Dados de menores:** não coletados (sem campo de data de nascimento sem validação de idade)
 
-#################################################################################################################
+#############################################################################################
 
 ## CONCLUSÃO ##
 
@@ -445,7 +445,7 @@ Durante a implementação do sistema foram concluídas as principais funcionalid
 - **Tratamento padronizado** de erros e exceções em todos os endpoints;
 - **Carga inicial de dados para testes e validação** contendo usuários, unidades, produtos e estoque previamente configurados.
 
-###################################################################################################################
+#############################################################################################
 
 ## PASSO A PASSO PARA INSTALAÇÃO DO MAVEN NO WINDOWS ##
 
