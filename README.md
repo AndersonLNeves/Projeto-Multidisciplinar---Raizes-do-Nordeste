@@ -449,7 +449,9 @@ Durante a implementação do sistema foram concluídas as principais funcionalid
 
 #############################################################################################
 
-## PASSO A PASSO PARA INSTALAÇÃO DO MAVEN NO WINDOWS ##
+## PASSO A PASSO DA INSTALAÇÃO DO MAVEN ##
+
+### NO WINDOWS ###
 
 1. Baixe o Apache Maven no link https://maven.apache.org/
 2. Escolha Binary zip archive
