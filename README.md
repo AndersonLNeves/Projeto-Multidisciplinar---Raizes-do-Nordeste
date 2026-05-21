@@ -25,7 +25,7 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 # SUMÁRIO #
 
 1. [Tecnologias](#tecnologias)
-2. [Executando o Sistema](#executando o sistema)
+2. [Executando o Sistema](#executando_o_sistema)
 3. [Acessando Swagger](#swagger)
 4. [Fluxo Principal](#fluxo-principal)
 5. [Endpoints](#endpoints)
@@ -37,19 +37,21 @@ O projeto simula o funcionamento real de um sistema moderno de restaurante, perm
 
 # TECNOLOGIAS #
 
-| Backend | ------ | Java 21 | --- | Spring Boot |
-| Segurança | ----- | JWT | --- | Spring Security | --- |	BCrypt |
-| Persistência | --- | JPA | --- | Hibernate | --- | H2 |
-|	Documentação e Testes | --- |	Swagger | --- |	Postman |
-| Versionamento | ---- | Git/GitHub |
+> BACKEND
 
 | Java 21 | --- Foi utilizado como linguagem principal de aplicação por possuir ampla utilização no mercado e forte integração com o ecossistema spring.
 
 | Spring Boot | --- Foi utilizado para simplificar a configuração da aplicação backend, permitindo criação rápida da API REST e integração com diversos módulos de framework spring.
 
+> SEGURANÇA
+
 | Spring Security + JWT | --- Foram fundamentais para realizar a autenticação, com base em JSON Web Token, o que garantia mais proteção dos endpoints e controle de acesso para cada perfil de usuário.
 
+> PERSISTÊNCIA
+
 | H2 Database | --- Foi nosso banco de dados em memória, para facilitar a execução local do projeto sem a necessidade de instalação adicional de servidores de banco de dados.
+
+> DOCUMENTAÇÃO E TESTES
 
 | Swagger e OpenAPI | --- Serviram de documentação automática de API, permitindo testes diretos dos endpoints e visualização das rotas disponíveis.
 
